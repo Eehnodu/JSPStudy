@@ -1,0 +1,20 @@
+package com.smhrd.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.smhrd.database.DAO;
+import com.smhrd.model.MemberVO;
+
+public class EmailCheck implements Command {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		MemberVO sessionVo = (MemberVO)request.getSession().getAttribute("member");
+		String email =  sessionVo.getEmail();
+		DAO dao = new DAO();
+		
+		return null;
+	}
+}

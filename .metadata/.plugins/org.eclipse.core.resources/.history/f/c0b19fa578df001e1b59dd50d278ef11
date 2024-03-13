@@ -1,0 +1,10 @@
+package com.smhrd.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Login {
+	public String excute(HttpServletRequest request, HttpServletResponse response) {
+		return null;
+	}
+}

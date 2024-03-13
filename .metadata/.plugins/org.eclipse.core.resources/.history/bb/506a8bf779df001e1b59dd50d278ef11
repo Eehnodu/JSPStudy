@@ -1,0 +1,16 @@
+package com.smhrd.controller;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.smhrd.database.DAO;
+import com.smhrd.model.MemberVO;
+
+public class Update {
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+	
+	}
+}

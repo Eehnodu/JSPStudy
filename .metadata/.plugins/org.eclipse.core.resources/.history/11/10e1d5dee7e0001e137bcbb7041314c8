@@ -1,0 +1,28 @@
+package com.smhrd.controller;
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.smhrd.database.DAO;
+
+public class EmailCheck implements Command {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+		String email = request.getParameter("email");
+				
+		DAO dao = new DAO();
+		String result = dao.EmailCheck(email);
+		System.out.println(result);
+		if (result != null) {
+			return result;
+		} else {
+			return "실패";
+		}
+	}
+}

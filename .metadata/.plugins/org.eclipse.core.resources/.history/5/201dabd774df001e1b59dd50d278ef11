@@ -1,0 +1,8 @@
+package com.smhrd.controller;
+
+public class Join {
+	public String execute() {
+		
+		return "";
+	}
+}

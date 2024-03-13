@@ -1,0 +1,7 @@
+package com.smhrd.controller;
+
+public class SelectAll {
+	public String execute() {
+		
+	}
+}

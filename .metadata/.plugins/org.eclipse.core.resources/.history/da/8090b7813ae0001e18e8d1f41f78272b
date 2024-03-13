@@ -1,0 +1,72 @@
+package com.smhrd.fontController;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.smhrd.controller.Command;
+import com.smhrd.controller.Join;
+import com.smhrd.controller.Login;
+import com.smhrd.controller.Logout;
+import com.smhrd.controller.SelectAll;
+import com.smhrd.controller.Update;
+
+@WebServlet("*.do")
+public class FrontController extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	// (Command - String)
+	private HashMap<String, Command> map = new HashMap<String, Command>();
+
+	// Servlet 생명주기
+	// > tomcat 관리 > 생성 ~ 소멸
+	// 1) 생성자 호출 2) init 초기화메소드 호출 3) service 메소드 호출 4) destroy 호출
+	@Override
+	public void init() throws ServletException {
+		
+	}
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+
+		String uri = request.getRequestURI();
+		String cp = request.getContextPath();
+		String path = uri.substring(cp.length() + 1);
+
+		String finalPath = null;
+		Command com = null;
+
+		if (path.equals("Join.do")) {
+			com = new Join();
+
+		} else if (path.equals("Login.do")) {
+			com = new Login();
+
+		} else if (path.equals("Logout.do")) {
+			com = new Logout();
+
+		} else if (path.equals("SelectAll.do")) {
+			com = new SelectAll();
+
+		} else if (path.equals("Update.do")) {
+			com = new Update();
+		}
+
+		finalPath = com.execute(request, response);
+
+		if (finalPath.contains("redirect:/")) {
+			response.sendRedirect(finalPath.split("/")[1] + ".jsp");
+		} else {
+			RequestDispatcher rd = request.getRequestDispatcher(finalPath + ".jsp");
+			rd.forward(request, response);
+		}
+	}
+}

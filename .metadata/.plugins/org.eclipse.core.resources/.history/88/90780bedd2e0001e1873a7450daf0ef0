@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">데이터전송</button>
+	<!-- 1. 라이브러리 불러오기 -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		// js코드르 작성할 수 있는 공간
+		function btn() {
+			let str = document.getElementById('txt').innerHTML;
+			console.log(str)
+		}
+		document.getElementById('btn').addEventListener('click',btn);
+	</script>
+</body>
+</html>

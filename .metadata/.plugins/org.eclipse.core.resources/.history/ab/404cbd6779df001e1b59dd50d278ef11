@@ -1,0 +1,23 @@
+package com.smhrd.controller;
+
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+
+import com.smhrd.database.DAO;
+import com.smhrd.model.MemberVO;
+
+public class SelectAll {
+	public String execute() {
+
+		DAO dao = new DAO();
+
+		ArrayList<MemberVO> list = (ArrayList<MemberVO>) dao.selectall();
+
+		request.setAttribute("memberinfo", list);
+
+		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+		rd.forward(request, response);
+
+	}
+}
