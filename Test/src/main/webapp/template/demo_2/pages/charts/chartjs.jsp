@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="UTF-8">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -175,7 +175,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Line chart</h4>
+                    <h4 class="card-title">Line chart(라인차트)</h4>
                     <canvas id="lineChart" style="height: 250px;"></canvas>
                   </div>
                 </div>
@@ -183,7 +183,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Bar chart</h4>
+                    <h4 class="card-title">Bar chart(바 차트)</h4>
                     <canvas id="barChart" style="height: 230px;"></canvas>
                   </div>
                 </div>
@@ -259,5 +259,6 @@
     <!-- Custom js for this page -->
     <script src="../../../assets/js/chart.js"></script>
     <!-- End custom js for this page -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </body>
 </html>

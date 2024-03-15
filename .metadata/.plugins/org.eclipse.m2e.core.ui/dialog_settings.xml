@@ -25,13 +25,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.smhrd.MavenSample01"/>
 		</list>
 		<list key="groupId">
-			<item value="com.smhrd"/>
 		</list>
 		<list key="artifactId">
-			<item value="MavenSample01"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -78,12 +75,18 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Question3"/>
+			<item value="Question2"/>
+			<item value="ProjectTest"/>
 			<item value="Test"/>
 			<item value="com.smhrd"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Question3"/>
+			<item value="Question2"/>
+			<item value="ProjectTest"/>
 			<item value="Test"/>
 			<item value="MavenSample02"/>
 		</list>

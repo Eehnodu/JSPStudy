@@ -6,7 +6,7 @@
 <!-- 2) configuration : mybatis 설정값들을 작성하는 공간 -->
 <configuration>
 	<typeAliases>
-	<typeAlias type="com.smhrd.model.MemberVO" alias="mvo"/>
+		<typeAlias type="com.smhrd.model.MemberVO" alias="mvo" />
 	</typeAliases>
 	<!-- 3) environments : DB들을 기술하는 공간 -->
 	<environments default="development">
